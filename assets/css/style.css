@@ -1,0 +1,99 @@
+:root {
+    --sky-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --selective-yellow: #ffb703ff;
+    --selective-yellow-trsp: #ffb70388;
+    --ut-orange: #fb8500ff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window {
+    position: absolute;
+    height: calc(100% - 80px);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: white;
+}
+
+.window > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.window > form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: var(--sky-blue);
+}
+
+h2 {
+    text-align: center;
+}
+
+#trainerContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pokeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.pokeName {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+article {
+    background: var(--selective-yellow-trsp);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border: 5px solid var(--prussian-blue);
+    border-radius: 15px;
+    padding: 5px;
+}

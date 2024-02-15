@@ -95,8 +95,6 @@ async function displayTrainers() {
         const deleteBtn = document.createElement("button");
         const detailBtn = document.createElement("button");
         const btnContainer = document.createElement("div");
-        const pokeContainer = document.createElement("div");
-        pokeContainer.classList.add("pokeContainer");
         modifyBtn.innerHTML = "Modify";
         modifyBtn.addEventListener("click", () => {
             editTrainerWin.classList.remove("hidden");
@@ -112,36 +110,40 @@ async function displayTrainers() {
             async () => {
                 const poke = await detailTrainer(e._id);
                 console.log(poke);
-                poke.map((el) => {
+                poke.forEach((el, i) => {
                     const pokemon = document.createElement("div");
                     pokemon.classList.add("pokemon");
 
+                    const pokeTitle = document.createElement("h4");
+                    pokeTitle.innerHTML = `POKEMON #${i + 1}`;
+
                     const pokeName = document.createElement("p");
                     pokeName.classList.add("pokeName");
-                    pokeName.innerHTML = el.name;
+                    pokeName.innerHTML = "<span>Name : </span>" + el.name;
 
                     const pokeType = document.createElement("p");
-                    pokeType.innerHTML = el.type;
+                    pokeType.innerHTML = "<span>Type : </span>" + el.type;
 
                     const pokeLvl = document.createElement("p");
-                    pokeLvl.innerHTML = el.level;
+                    pokeLvl.innerHTML = "<span>Level : </span>" + el.level;
 
                     const pokeAtk = document.createElement("div");
-                    const pokeAtkTitle = document.createElement("h3");
+                    const pokeAtkTitle = document.createElement("h5");
                     pokeAtkTitle.innerHTML = "Attacks :";
                     pokeAtk.appendChild(pokeAtkTitle);
                     el.attack.map((atk) => {
-                        const attack = document.createElement("p");
+                        const attack = document.createElement("li");
                         attack.innerHTML = atk;
                         pokeAtk.appendChild(attack);
                     });
 
+                    pokemon.appendChild(pokeTitle);
                     pokemon.appendChild(pokeName);
                     pokemon.appendChild(pokeType);
                     pokemon.appendChild(pokeLvl);
                     pokemon.appendChild(pokeAtk);
 
-                    pokeContainer.appendChild(pokemon);
+                    article.appendChild(pokemon);
                 });
             },
             { once: true },
@@ -155,7 +157,6 @@ async function displayTrainers() {
         article.appendChild(title);
         article.appendChild(age);
         article.appendChild(btnContainer);
-        article.appendChild(pokeContainer);
         trainerContainer.appendChild(article);
     });
 }

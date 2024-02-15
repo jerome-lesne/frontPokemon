@@ -1,10 +1,9 @@
 :root {
-    --sky-blue: #8ecae6ff;
-    --blue-green: #219ebcff;
-    --prussian-blue: #023047ff;
-    --selective-yellow: #ffb703ff;
-    --selective-yellow-trsp: #ffb70388;
-    --ut-orange: #fb8500ff;
+    --green: #b3ffa9;
+    --pink: #ffa9b3;
+    --purple: #a9b3ff;
+    --yellow: #fdff98;
+    --brown: #dfc189;
 }
 
 * {
@@ -50,11 +49,23 @@ header {
 }
 
 body {
-    background: var(--sky-blue);
+    background: whitesmoke;
 }
 
 h2 {
     text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
 }
 
 #trainerContainer {
@@ -65,35 +76,30 @@ h2 {
     gap: 10px;
 }
 
-.pokeContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-}
+/* .pokeContainer { */
+/*     display: flex; */
+/*     flex-wrap: wrap; */
+/*     gap: 10px; */
+/*     padding: 10px; */
+/* } */
 
 .pokemon {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
-}
-
-.pokeName {
-    font-size: 15px;
-    font-weight: bold;
+    width: 150px;
 }
 
 article {
-    background: var(--selective-yellow-trsp);
+    background: var(--green);
     display: flex;
     gap: 10px;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    border: 5px solid var(--prussian-blue);
+    width: 350px;
+    border: 5px solid black;
     border-radius: 15px;
     padding: 5px;
 }

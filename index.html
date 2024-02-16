@@ -1,86 +1,87 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Pokemon</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="./assets/css/style.css" rel="stylesheet" />
-    </head>
 
-    <body>
-        <header>
-            <h1>Trainers List</h1>
-        </header>
-        <main>
-            <div id="editTrainer" class="hidden window">
-                <h2>Edit Trainer</h2>
-                <form method="post" id="formEdit">
-                    <div>
-                        <label for="nameEdit">Name</label>
-                        <input
-                            type="text"
-                            name="nameEdit"
-                            id="nameEdit"
-                            value=""
-                        />
-                    </div>
-                    <div>
-                        <label for="ageEdit">Age</label>
-                        <input
-                            type="number"
-                            name="ageEdit"
-                            id="ageEdit"
-                            value=""
-                        />
-                    </div>
-                    <div>
-                        <input
-                            type="button"
-                            name="editSend"
-                            id="editSend"
-                            value="Confirm"
-                        />
-                    </div>
-                </form>
-            </div>
-            <div id="addTrainer" class="hidden window">
-                <h2>Add Trainer</h2>
-                <form method="post" id="formAdd">
-                    <div>
-                        <label for="nameAdd">Name</label>
-                        <input
-                            type="text"
-                            name="nameAdd"
-                            id="nameAdd"
-                            value=""
-                        />
-                    </div>
-                    <div>
-                        <label for="ageAdd">Age</label>
-                        <input
-                            type="number"
-                            name="ageAdd"
-                            id="ageAdd"
-                            value=""
-                        />
-                    </div>
-                    <div>
-                        <input
-                            type="button"
-                            name="addSend"
-                            id="addSend"
-                            value="Confirm"
-                        />
-                    </div>
-                </form>
-            </div>
+<head>
+    <title>Pokemon</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Trainers List</h1>
+    </header>
+    <main>
+        <div id="editTrainer" class="hidden window">
+            <h2>Edit Trainer</h2>
+            <form method="post" id="formEdit">
+                <div>
+                    <label for="nameEdit">Name</label>
+                    <input type="text" name="nameEdit" id="nameEdit" value="" />
+                </div>
+                <div>
+                    <label for="ageEdit">Age</label>
+                    <input type="number" name="ageEdit" id="ageEdit" value="" />
+                </div>
+                <div>
+                    <input type="button" name="editSend" id="editSend" value="Confirm" />
+                </div>
+            </form>
+        </div>
+        <div id="addTrainer" class="hidden window">
+            <h2>Add Trainer</h2>
+            <form method="post" id="formAdd">
+                <div>
+                    <label for="nameAdd">Name</label>
+                    <input type="text" name="nameAdd" id="nameAdd" value="" />
+                </div>
+                <div>
+                    <label for="ageAdd">Age</label>
+                    <input type="number" name="ageAdd" id="ageAdd" value="" />
+                </div>
+                <div>
+                    <input type="button" name="addSend" id="addSend" value="Confirm" />
+                </div>
+            </form>
+        </div>
+        <div id="setPoke" class="hidden window">
+            <h2>Add Pokemon</h2>
+            <form method="post" id="formPoke">
+                <div>
+                    <label for="namePoke">Name</label>
+                    <input type="text" name="namePoke" id="namePoke" value="" />
+                </div>
+                <div>
+                    <label for="typePoke">Type</label>
+                    <input type="text" name="typePoke" id="typePoke" value="" />
+                </div>
+                <div>
+                    <label for="level">Level</label>
+                    <input type="number" name="level" id="level" value="" />
+                </div>
+                <div>
+                    <label for="atk">Attack (separate by ",")</label>
+                    <input type="text" name="atk" id="atk" value="" />
+                </div>
+                <div>
+                    <input type="button" name="addPokeSend" id="addPokeSend" value="Confirm" />
+                </div>
+            </form>
+        </div>
+        <section id="list">
             <div id="commands">
-                <button type="button" id="addTrainerBtn">Add Trainer</button>
+                <button type="button" id="addTrainerBtn">
+                    Add Trainer
+                </button>
             </div>
-            <section>
-                <div id="trainerContainer"></div>
-            </section>
-        </main>
-        <script src="./assets/js/script.js"></script>
-    </body>
+            <div id="trainerContainer"></div>
+        </section>
+        <section id="bgInfo">
+            <div id="info"></div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
